@@ -1,0 +1,130 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-65eda17ad4ca
+Exec   : patchSummary -parallel
+Date   : Oct 06 2025
+Time   : 13:36:51
+Host   : "HIAS-Physics-2022"
+PID    : 44028
+I/O    : uncollated
+Case   : /home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30
+nProcs : 6
+Slaves : 
+5
+(
+"HIAS-Physics-2022.44029"
+"HIAS-Physics-2022.44030"
+"HIAS-Physics-2022.44031"
+"HIAS-Physics-2022.44032"
+"HIAS-Physics-2022.44033"
+)
+
+Pstream initialised with:
+    floatTransfer      : false
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Time = 0s
+
+Valid fields:
+    volScalarField	thickness
+    volScalarField	nut
+    volVectorField	U
+    volScalarField	k
+    volScalarField	p
+    volScalarField	cellLevel
+    pointScalarField	pointLevel
+    volScalarField	thicknessFraction
+    volScalarField	nSurfaceLayers
+    volScalarField	omega
+
+patch	: frontAndBack
+patch	: upperWall
+    scalar		thickness		fixedValue
+    scalar		nut		calculated
+    scalar		k		slip
+    scalar		p		slip
+    scalar		cellLevel		calculated
+    scalar		thicknessFraction		fixedValue
+    scalar		nSurfaceLayers		fixedValue
+    scalar		omega		slip
+    vector		U		slip
+    scalar		pointLevel		calculated
+
+patch	: inlet
+    scalar		thickness		fixedValue
+    scalar		nut		calculated
+    scalar		k		fixedValue
+    scalar		p		zeroGradient
+    scalar		cellLevel		calculated
+    scalar		thicknessFraction		fixedValue
+    scalar		nSurfaceLayers		fixedValue
+    scalar		omega		fixedValue
+    vector		U		fixedValue
+    scalar		pointLevel		calculated
+
+patch	: outlet
+    scalar		thickness		fixedValue
+    scalar		nut		calculated
+    scalar		k		inletOutlet
+    scalar		p		fixedValue
+    scalar		cellLevel		calculated
+    scalar		thicknessFraction		fixedValue
+    scalar		nSurfaceLayers		fixedValue
+    scalar		omega		inletOutlet
+    vector		U		inletOutlet
+    scalar		pointLevel		calculated
+
+wall	: lowerWall
+    scalar		thickness		fixedValue
+    scalar		nut		nutkWallFunction
+    scalar		k		kqRWallFunction
+    scalar		p		zeroGradient
+    scalar		cellLevel		calculated
+    scalar		thicknessFraction		fixedValue
+    scalar		nSurfaceLayers		fixedValue
+    scalar		omega		omegaWallFunction
+    vector		U		fixedValue
+    scalar		pointLevel		calculated
+
+wall	: BikeWheel
+    scalar		thickness		fixedValue
+    scalar		nut		nutkWallFunction
+    scalar		k		kqRWallFunction
+    scalar		p		zeroGradient
+    scalar		cellLevel		calculated
+    scalar		thicknessFraction		fixedValue
+    scalar		nSurfaceLayers		fixedValue
+    scalar		omega		omegaWallFunction
+    vector		U		noSlip
+    scalar		pointLevel		calculated
+
+group	: processor
+    scalar		thickness		processor
+    scalar		nut		processor
+    scalar		k		processor
+    scalar		p		processor
+    scalar		cellLevel		processor
+    scalar		thicknessFraction		processor
+    scalar		nSurfaceLayers		processor
+    scalar		omega		processor
+    vector		U		processor
+    scalar		pointLevel		processor
+
+End
+
+Finalising parallel run

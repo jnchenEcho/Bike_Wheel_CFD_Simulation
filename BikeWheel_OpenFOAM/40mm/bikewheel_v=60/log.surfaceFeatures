@@ -1,0 +1,72 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-65eda17ad4ca
+Exec   : surfaceFeatures
+Date   : Oct 06 2025
+Time   : 13:35:00
+Host   : "HIAS-Physics-2022"
+PID    : 43733
+I/O    : uncollated
+Case   : /home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading "surfaceFeaturesDict"
+
+Surface            : "BikeWheel.obj"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 3612
+Vertices     : 1856
+Bounding Box : (-0.350091 -0.030996 -0.350091) (0.350091 0.030996 0.350091)
+
+
+Constructing feature set from included angle 2.61799
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 9
+    feature edges  : 1862
+    of which
+        region edges   : 0
+        external edges : 1738
+        internal edges : 124
+
+
+Final feature set:
+points      : 1856
+edges       : 1862
+boundingBox : (-0.350091 -0.030996 -0.350091) (0.350091 0.030996 0.350091)
+point classification :
+    convex feature points          :        3
+    concave feature points         :        0
+    mixed feature points           :        6
+    other (non-feature) points     :     1847
+edge classification :
+    external (convex angle) edges  :     1744
+    internal (concave angle) edges :      118
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "constant/extendedFeatureEdgeMesh/BikeWheel.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "constant/geometry/BikeWheel.eMesh"
+
+ExecutionTime = 0.012123 s  ClockTime = 0 s
+
+End
+

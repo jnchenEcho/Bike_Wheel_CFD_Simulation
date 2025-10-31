@@ -1,0 +1,117 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  13
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 13-65eda17ad4ca
+Exec   : decomposePar -copyZero
+Date   : Oct 06 2025
+Time   : 13:35:00
+Host   : "HIAS-Physics-2022"
+PID    : 43735
+I/O    : uncollated
+Case   : /home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Calculating distribution of cells
+
+Selecting decomposer hierarchical
+
+Finished decomposition in 0.000709 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 213
+    Number of faces shared with processor 1 = 40
+    Number of faces shared with processor 3 = 61
+    Number of faces shared with processor 4 = 1
+    Number of processor patches = 3
+    Number of processor faces = 102
+    Number of boundary faces = 140
+
+Processor 1
+    Number of cells = 213
+    Number of faces shared with processor 0 = 40
+    Number of faces shared with processor 2 = 32
+    Number of faces shared with processor 3 = 2
+    Number of faces shared with processor 4 = 49
+    Number of processor patches = 4
+    Number of processor faces = 123
+    Number of boundary faces = 109
+
+Processor 2
+    Number of cells = 214
+    Number of faces shared with processor 1 = 32
+    Number of faces shared with processor 4 = 2
+    Number of faces shared with processor 5 = 63
+    Number of processor patches = 3
+    Number of processor faces = 97
+    Number of boundary faces = 135
+
+Processor 3
+    Number of cells = 213
+    Number of faces shared with processor 0 = 61
+    Number of faces shared with processor 1 = 2
+    Number of faces shared with processor 4 = 33
+    Number of processor patches = 3
+    Number of processor faces = 96
+    Number of boundary faces = 134
+
+Processor 4
+    Number of cells = 213
+    Number of faces shared with processor 0 = 1
+    Number of faces shared with processor 1 = 49
+    Number of faces shared with processor 2 = 2
+    Number of faces shared with processor 3 = 33
+    Number of faces shared with processor 5 = 41
+    Number of processor patches = 5
+    Number of processor faces = 126
+    Number of boundary faces = 110
+
+Processor 5
+    Number of cells = 214
+    Number of faces shared with processor 2 = 63
+    Number of faces shared with processor 4 = 41
+    Number of processor patches = 2
+    Number of processor faces = 104
+    Number of boundary faces = 140
+
+Number of processor faces = 324
+Max number of cells = 214 (0.3125% above average 213.333)
+Max number of processor patches = 5 (50% above average 3.33333)
+Max number of faces between processors = 126 (16.6667% above average 108)
+
+Time = 0s
+
+Processor 0: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor0"
+Processor 1: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor1"
+Processor 2: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor2"
+Processor 3: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor3"
+Processor 4: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor4"
+Processor 5: copying "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/0"
+ to "/home/jnchen/BikeWheel/BikeWheel_OpenFOAM/40mm/bikewheel_30/processor5"
+
+End
+
